@@ -33,4 +33,14 @@ setup(
             'cam=circum_cam.cam:webcam'
         ]
     },
+    extras_require={
+        'lint': [
+            'flake8',
+            'flake8-import-order',
+            'flake8-builtins',
+            'flake8-comprehensions',
+            'flake8-bandit',
+            'flake8-bugbear',
+        ]
+    }
 )
