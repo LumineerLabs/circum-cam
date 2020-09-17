@@ -30,7 +30,7 @@ setup(
     ],
     entry_points={
         'circum.sensors': [
-            'cam=circum_cam.cam:webcam'
+            'cam=circum_cam.cam:webcam_command'
         ]
     },
     extras_require={

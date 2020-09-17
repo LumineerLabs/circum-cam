@@ -56,8 +56,6 @@ def run_cam(cam_args: {}) -> {}:
     return ret
 
 
-@click.command()
-@click.pass_context
 def webcam(ctx):
     global tracking_semaphore
     tracking_semaphore = Semaphore()
@@ -66,3 +64,9 @@ def webcam(ctx):
     tracker_thread.daemon = True
     tracker_thread.start()
     circum.endpoint.start_endpoint(ctx, "cam", run_cam)
+
+
+@click.command()
+@click.pass_context
+def webcam_command(ctx):
+    webcam(ctx)
